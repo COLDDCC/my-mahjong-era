@@ -1,35 +1,12 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
-const title="American Mahjong Sets: What to Buy for Beginners | My Mahjong Era";
-const description="Learn what to look for in an American Mahjong set: tile count, jokers, racks, carrying cases and the annual card.";
+const title="American Mahjong Set Buying Guide: Tiles, Racks & What to Check | My Mahjong Era";
+const description="How to choose an American Mahjong set: compare 152-tile contents, jokers, racks, pushers, tile dimensions and beginner-friendly buying options.";
 const canonical="https://mymahjongera.com/american-mahjong/sets/";
-const heading="American Mahjong Sets: A Beginner's Buying Guide";
-const sections=[
-  {
-    "heading": "Check the ruleset first",
-    "body": "Not every Mahjong set is designed for American Mah Jongg. Verify that the set has the required jokers and flowers and that its tile mix works with the annual card you plan to use."
-  },
-  {
-    "heading": "Look for 152 tiles",
-    "body": "Many contemporary American-style sets contain 152 tiles, including eight jokers. Check the full component list rather than relying on the product name alone."
-  },
-  {
-    "heading": "Racks and pushers",
-    "body": "Racks hold your tiles upright. Pushers can make it easier to move a wall without reaching across the table. Check whether racks and pushers are included or sold separately."
-  },
-  {
-    "heading": "Tile size and readability",
-    "body": "Choose tiles with legible markings and a comfortable weight. Compare dimensions before purchasing; larger tiles may need a larger table."
-  },
-  {
-    "heading": "Budget for the annual card",
-    "body": "A beautiful tile set is not a replacement for the current annual hand card. Budget for the reference material used by your playing group."
-  },
-  {
-    "heading": "Where to buy",
-    "body": "You can compare independent retailers and official products, but always verify specifications, shipping and return terms. My Mahjong Era does not currently operate a store or claim retailer affiliation."
-  }
-];
-const related=[{"href":"/american-mahjong/how-to-play/","label":"How to Play"},{"href":"/american-mahjong/rules/","label":"Rules"},{"href":"/american-mahjong/tiles/","label":"Tile Guide"}];
+const heading="How to choose an American Mahjong set";
+const eyebrow="American Mahjong / Buying Guide";
+const sections=[{"heading":"What should an American Mahjong set include?","body":"For common National Mah Jongg League-style play, look for 152 playing tiles: 108 suited tiles (dots, bams and cracks), 16 winds, 12 dragons, 8 flowers and 8 jokers. Sellers may include spare or blank tiles, so read the itemized contents rather than relying on the total printed on the box."},{"heading":"152 tiles vs. larger retail sets","body":"Some retailers advertise 160, 166 or other tile counts because they include spare tiles, blanks or additional flowers. A higher total is not necessarily a problem. What matters is whether the 152 tiles needed for your ruleset are present. Check how many jokers and flowers the listing actually includes."},{"heading":"Racks and pushers: do you need both?","body":"Four racks are useful for keeping tiles upright and private. Pushers help move tile walls without stretching across the table. Some starter bundles include four rack-and-pusher combinations; others sell these separately. Confirm what is in the box before comparing prices."},{"heading":"Tile size, legibility and table fit","body":"Look at the actual dimensions in millimeters or inches, not only lifestyle photos. Large tiles may be easier to read but occupy more table space and weigh more when carried. If you play regularly with friends, check whether all four racks and walls fit comfortably on your table."},{"heading":"Travel, beginner and premium sets","body":"A travel set prioritizes compact storage and low weight. A beginner set prioritizes legible markings and complete accessories. A premium set may focus on decorative colorways, materials and packaging. All three can work if the tile mix matches American rules."},{"heading":"Don't forget the annual card","body":"A tile set and an annual winning-hands card are different purchases. Groups following National Mah Jongg League play use the current year's official card. Check the issuer's current instructions rather than assuming a decorative rules insert is enough."},{"heading":"Before you buy: a seven-point checklist","body":"Verify the American-compatible tile mix; eight jokers; eight flowers; clear numbers or markings; tile dimensions; four racks and whether pushers are included; case, shipping and return policies. Confirm the seller is reputable and that any annual card is official."},{"heading":"Where to shop responsibly","body":"Compare listings from established Mahjong retailers, specialist game stores and local shops. Check exact contents and returns rather than trusting the phrase “American Mahjong set” alone. We do not currently sell sets or rank products by affiliate commission."}];
+const faq=[{"question":"How many tiles are in an American Mahjong set?","answer":"The standard playing set for common NMJL-style play uses 152 tiles. Retail boxes can include extras such as blanks or spare tiles."},{"question":"Do I need a card if I buy a Mahjong set?","answer":"Yes, if you are playing an annual-card ruleset such as NMJL American Mah Jongg, you need the applicable official card in addition to the tiles."},{"question":"Can I use a Chinese Mahjong set for American Mahjong?","answer":"Only if its components match the American ruleset, including the necessary jokers and flowers. Many standard Chinese sets do not include eight jokers."}];
+const related=[{"href":"/american-mahjong/tiles/","label":"Explore the Tiles"},{"href":"/american-mahjong/card/","label":"Understand the Card"},{"href":"/american-mahjong/how-to-play/","label":"Learn to Play"}];
 ---
-<ArticleLayout  photo="https://unsplash.com/photos/yUaqsVKIHYE/download?force=true&w=1200" photoAlt="Mahjong tiles arranged on a tabletop" photoCredit="Jericka Cruz" photoSource="https://unsplash.com/photos/mahjong-tiles-arranged-on-a-table-yUaqsVKIHYE" {title} {description} {canonical} {heading} {sections} {related} note="This is an independent educational overview. For official play, consult the current National Mah Jongg League card and applicable rules. Annual card patterns are not reproduced here." />
+<ArticleLayout {title} {description} {canonical} {heading} {eyebrow} {sections} {faq} {related} note="This independent guide describes common NMJL-style American Mah Jongg. For authoritative play, consult the official current rules and annual card; we do not reproduce copyrighted hand patterns." />
