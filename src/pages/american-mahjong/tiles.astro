@@ -1,31 +1,12 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
-const title="American Mahjong Tiles: Suits, Flowers, Jokers & Sets | My Mahjong Era";
-const description="Understand American Mahjong tiles: dots, bams, cracks, winds, dragons, flowers, jokers and how American sets differ from other Mahjong sets.";
+const title="American Mahjong Tiles Explained: 152-Tile Breakdown | My Mahjong Era";
+const description="American Mahjong tiles explained with a 152-tile count table: dots, bams, cracks, winds, dragons, flowers, jokers and shopping tips.";
 const canonical="https://mymahjongera.com/american-mahjong/tiles/";
-const heading="American Mahjong Tiles: What Is in the Set?";
-const sections=[
-  {
-    "heading": "Three numbered suits",
-    "body": "Dots (circles), bams (bamboo) and cracks (characters) each run from one through nine. Learn to recognize these first."
-  },
-  {
-    "heading": "Winds and dragons",
-    "body": "East, South, West and North winds are honor tiles. Dragons are another honor category, often coordinated with the three suits in American play."
-  },
-  {
-    "heading": "Flowers and jokers",
-    "body": "Flowers are special tiles, while jokers have specific substitution rules. They play different roles and are not interchangeable."
-  },
-  {
-    "heading": "How many tiles?",
-    "body": "A typical American Mahjong set used in contemporary league-style play contains 152 tiles, including eight jokers. Check the set specification because other Mahjong variants and specialty sets differ."
-  },
-  {
-    "heading": "Shopping for a first set",
-    "body": "Before purchasing, check that a set supports American rules, includes the expected jokers and flowers, and fits your preferred racks and table size. You will also need a current annual card."
-  }
-];
-const related=[{"href":"/american-mahjong/how-to-play/","label":"How to Play"},{"href":"/american-mahjong/rules/","label":"Rules"},{"href":"/american-mahjong/card/","label":"Annual Card"}];
+const heading="American Mahjong tiles, explained";
+const eyebrow="American Mahjong / Tile Library";
+const sections=[{"heading":"The 152-tile breakdown","body":"A typical American Mah Jongg playing set has 108 suited tiles, 16 winds, 12 dragons, 8 flowers and 8 jokers. Some retail sets contain additional spare tiles, so use this as a playing-set reference rather than a guarantee of package size."},{"heading":"Dots, bams and cracks","body":"The three suits each have ranks one through nine, with four copies of each numbered tile. That makes 36 tiles per suit and 108 suited tiles overall. Dots show circles, bams represent bamboo, and cracks show Chinese characters."},{"heading":"The four winds","body":"East, South, West and North are honor tiles, with four copies of each wind. They are not interchangeable with numbered suit tiles."},{"heading":"The three dragons","body":"Red, green and white dragons are honor tiles, typically four of each. Design conventions differ between tile sets; white dragons may appear as blank-looking tiles or framed symbols, so check the product legend."},{"heading":"Flowers","body":"The American playing set commonly uses eight flowers. Their markings can vary between manufacturers, but for many American-card hands flowers are treated according to the official card and rules rather than as numbered suits."},{"heading":"Jokers","body":"Eight jokers are a defining feature of common American Mah Jongg play. They can stand in for eligible tiles in certain groups, but not every single tile or pair. Always follow the applicable rules and hand requirements."},{"heading":"Do extra blanks or spare tiles count?","body":"Some boxes include blank tiles, replacement tiles or extra flowers. They may be useful as spares, but they do not change the standard 152-tile playing mix. Count the components, not only the advertised package total."},{"heading":"How to recognize a beginner-friendly set","body":"Choose clear suit markings, legible indices, enough contrast and a complete joker/flower mix. If buying online, check photos of every tile family and ask for a component inventory if one is missing."}];
+const faq=[{"question":"How many jokers are in American Mahjong?","answer":"Common NMJL-style American Mah Jongg uses eight jokers."},{"question":"How many flower tiles do you need?","answer":"The common 152-tile American playing set contains eight flower tiles."},{"question":"Are American Mahjong tiles different from Chinese Mahjong tiles?","answer":"Many basic suits and honors are shared, but American-style sets commonly include eight jokers and eight flowers, and may include American-friendly indices or accessories."}];
+const related=[{"href":"/american-mahjong/sets/","label":"Choosing a Set"},{"href":"/american-mahjong/rules/","label":"Understand the Rules"},{"href":"/american-mahjong/card/","label":"Annual Card"}];
 ---
-<ArticleLayout  photo="https://unsplash.com/photos/9qevZpcqIf0/download?force=true&w=1200" photoAlt="Close-up of mahjong tiles scattered on a wooden table" photoCredit="Jason Leung" photoSource="https://unsplash.com/photos/mahjong-tiles-scattered-on-a-wooden-table-9qevZpcqIf0" {title} {description} {canonical} {heading} {sections} {related} note="This is an independent educational overview. For official play, consult the current National Mah Jongg League card and applicable rules. Annual card patterns are not reproduced here." />
+<ArticleLayout {title} {description} {canonical} {heading} {eyebrow} {sections} {faq} {related} note="This independent guide describes common NMJL-style American Mah Jongg. For authoritative play, consult the official current rules and annual card; we do not reproduce copyrighted hand patterns." />
