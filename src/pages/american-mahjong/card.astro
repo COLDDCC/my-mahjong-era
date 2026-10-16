@@ -1,5 +1,31 @@
 ---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
 const title="American Mahjong Card: Annual Hands & How to Read It | My Mahjong Era";
 const description="Understand the American Mahjong annual card, what the patterns mean, why the card changes and how beginners can learn to read it.";
+const canonical="https://mymahjongera.com/american-mahjong/card/";
+const heading="American Mahjong Card: How the Annual Hands Work";
+const sections=[
+  {
+    "heading": "Why is there an annual card?",
+    "body": "In common American Mah Jongg play, winning hands are selected from a published card that changes each year. A hand valid under one year's card may not be valid under the next."
+  },
+  {
+    "heading": "How do you read a pattern?",
+    "body": "A card shows groups of tiles and requirements for a legal hand. The symbols, colors and section labels have specific meanings. Learn the official legend before trying to memorize hands."
+  },
+  {
+    "heading": "Exposed and concealed",
+    "body": "Some hands permit exposures, while concealed hands impose stricter requirements. Pay attention to the marking for each pattern."
+  },
+  {
+    "heading": "Jokers are not universal wildcards",
+    "body": "Jokers are useful in eligible groups, but cannot substitute for every single or pair. Follow the official rules and the hand's requirements."
+  },
+  {
+    "heading": "Use the current official card",
+    "body": "Obtain the current card from the authorized issuer. We do not reproduce its copyrighted hand patterns or sell unofficial copies."
+  }
+];
+const related=[{"href":"/american-mahjong/how-to-play/","label":"How to Play"},{"href":"/american-mahjong/rules/","label":"Rules"},{"href":"/american-mahjong/tiles/","label":"Tile Guide"}];
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href="https://mymahjongera.com/american-mahjong/card/"/><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@500;600&display=swap');body{margin:0;background:#fffcf8;color:#502b39;font:17px/1.8 'DM Sans',Arial,sans-serif}header{padding:22px 6%;border-bottom:1px solid #eadde1}header a{color:#963e5f;font-weight:700;text-decoration:none}main{max-width:780px;margin:70px auto;padding:0 24px}h1,h2{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spacing:-.04em}h1{font-size:clamp(43px,6vw,67px)}h2{font-size:30px;margin-top:45px}p{color:#6d5360}.kicker{color:#a34a69;letter-spacing:.16em;font-size:12px;text-transform:uppercase}aside{background:#f8e9ed;padding:25px;margin:40px 0}a{color:#9e3e61}footer{background:#f7e8ec;padding:28px;text-align:center}</style></head><body><header><a href="/">✿ My Mahjong Era</a> &nbsp; / &nbsp; <a href="/american-mahjong/">American Mahjong</a></header><main><p class="kicker">American Mahjong / Guides</p><h1>American Mahjong Card: How the Annual Hands Work</h1><p>Understand the American Mahjong annual card, what the patterns mean, why the card changes and how beginners can learn to read it.</p><section><h2>Why is there an annual card?</h2><p>In common American Mah Jongg play, winning hands are selected from a published card that changes each year. A hand valid under one year's card may not be valid under the next.</p></section><section><h2>How do you read a pattern?</h2><p>A card shows groups of tiles and requirements for a legal hand. The symbols, colors and section labels have specific meanings. Learn the official legend before trying to memorize hands.</p></section><section><h2>Exposed and concealed</h2><p>Some hands permit exposures, while concealed hands impose stricter requirements. Pay attention to the marking for each pattern.</p></section><section><h2>Jokers are not universal wildcards</h2><p>Jokers are useful in eligible groups, but cannot substitute for every single or pair. Follow the official rules and the hand's requirements.</p></section><section><h2>Use the current official card</h2><p>Obtain the current card from the authorized issuer. We do not reproduce its copyrighted hand patterns or sell unofficial copies.</p></section><aside>Independent educational guide. We are not affiliated with the National Mah Jongg League or any Mahjong retailer. Check current official rules and product specifications.</aside><p><a href="/american-mahjong/">← Explore more American Mahjong guides</a></p></main><footer>© {new Date().getFullYear()} My Mahjong Era</footer></body></html>
+<ArticleLayout {title} {description} {canonical} {heading} {sections} {related} note="This is an independent educational overview. For official play, consult the current National Mah Jongg League card and applicable rules. Annual card patterns are not reproduced here." />
