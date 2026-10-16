@@ -1,0 +1,4 @@
+---
+const pathname=Astro.url.pathname;
+---
+<div class="site-announcement">Your seat at the table starts here ✳</div><header class="site-header"><div class="site-header-inner"><a class="site-logo" href="/" aria-label="My Mahjong Era home">my mahjong era<span aria-hidden="true"> ✳</span></a><nav class="site-nav" aria-label="Main navigation"><a href="/american-mahjong/" aria-current={pathname.startsWith('/american-mahjong/')?'page':undefined}>American Mahjong</a><a href="/lifestyle/mahjong-night/">Mahjong Night</a><a href="/world/">Around the World</a><a href="/#tools" class="nav-cta">Free Tools ↗</a></nav></div></header>
