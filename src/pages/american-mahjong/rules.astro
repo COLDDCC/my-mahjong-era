@@ -1,6 +1,31 @@
 ---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
 const title="American Mahjong Rules: Jokers, Charleston & Winning Hands | My Mahjong Era";
 const description="A beginner-friendly overview of American Mahjong rules, including the Charleston, jokers, exposures, annual card and winning hands.";
 const canonical="https://mymahjongera.com/american-mahjong/rules/";
+const heading="American Mahjong Rules: The Essentials";
+const sections=[
+  {
+    "heading": "The annual card matters",
+    "body": "In common American Mah Jongg play, valid winning hands are defined by a card updated each year. Always use the same current card as the rest of your table."
+  },
+  {
+    "heading": "Charleston tile passing",
+    "body": "The Charleston is a series of tile exchanges before normal play. The sequence and optional passes should follow the rules adopted by your group."
+  },
+  {
+    "heading": "Jokers have limits",
+    "body": "Jokers can substitute in eligible groups but not everywhere. In particular, a joker cannot simply replace any tile in any hand. Consult the current rules for exact restrictions and exchanges."
+  },
+  {
+    "heading": "Exposed and concealed hands",
+    "body": "Calling a discard can reveal tiles in an exposed grouping. Some card hands must remain concealed, so calls may be restricted."
+  },
+  {
+    "heading": "Scoring and etiquette",
+    "body": "Scoring depends on the hand and the rules in use. Agree on table etiquette, mistaken exposures and dispute handling before a beginner game."
+  }
+];
+const related=[{"href":"/american-mahjong/how-to-play/","label":"How to Play"},{"href":"/american-mahjong/tiles/","label":"Tile Guide"},{"href":"/american-mahjong/card/","label":"Annual Card"}];
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');*{box-sizing:border-box}body{margin:0;background:#fffcf8;color:#512b37;font:17px/1.8 'DM Sans',Arial,sans-serif}header{border-bottom:1px solid #e8dce0;padding:22px max(24px,calc((100vw - 1100px)/2));display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}header a{color:#963d60;text-decoration:none;font-weight:700}main{max-width:790px;margin:70px auto;padding:0 24px}.kicker{letter-spacing:.18em;font-size:11px;text-transform:uppercase;color:#9c4967;font-weight:700}h1,h2{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.045em;line-height:1.17}h1{font-size:clamp(42px,6vw,70px);margin:20px 0 35px}h2{font-size:33px;margin:46px 0 15px}p{color:#705965}a{color:#a13c62}aside{background:#f9e8ed;padding:26px;margin:45px 0}.related{display:flex;gap:12px;flex-wrap:wrap}.related a{background:#f3e7e8;padding:10px 16px;text-decoration:none;border-radius:30px;font-size:13px;font-weight:700}footer{padding:35px;text-align:center;background:#f5e6e8;font-size:12px;color:#7a5361}</style></head><body><header><a href="/">✿ My Mahjong Era</a><nav><a href="/american-mahjong/">American Mahjong</a> · <a href="/world/">Around the World</a></nav></header><main><div class="kicker">American Mahjong · Learn & Play</div><h1>American Mahjong Rules: The Essentials</h1><p>A beginner-friendly overview of American Mahjong rules, including the Charleston, jokers, exposures, annual card and winning hands.</p><section><h2>The annual card matters</h2><p>In common American Mah Jongg play, valid winning hands are defined by a card updated each year. Always use the same current card as the rest of your table.</p></section><section><h2>Charleston tile passing</h2><p>The Charleston is a series of tile exchanges before normal play. The sequence and optional passes should follow the rules adopted by your group.</p></section><section><h2>Jokers have limits</h2><p>Jokers can substitute in eligible groups but not everywhere. In particular, a joker cannot simply replace any tile in any hand. Consult the current rules for exact restrictions and exchanges.</p></section><section><h2>Exposed and concealed hands</h2><p>Calling a discard can reveal tiles in an exposed grouping. Some card hands must remain concealed, so calls may be restricted.</p></section><section><h2>Scoring and etiquette</h2><p>Scoring depends on the hand and the rules in use. Agree on table etiquette, mistaken exposures and dispute handling before a beginner game.</p></section><aside><strong>A note on official rules</strong><p>This is an independent educational overview, not a substitute for the current official National Mah Jongg League card or rules. We do not reproduce copyrighted annual card patterns.</p></aside><h2>Keep exploring</h2><div class="related"><a href="/">a →</a><a href="S">t →</a><a href="/">a →</a><a href="T">i →</a><a href="/#tools">Free tools →</a></div></main><footer>© {new Date().getFullYear()} My Mahjong Era · Independent American Mahjong learning and lifestyle</footer></body></html>
+<ArticleLayout {title} {description} {canonical} {heading} {sections} {related} note="This is an independent educational overview. For official play, consult the current National Mah Jongg League card and applicable rules. Annual card patterns are not reproduced here." />
