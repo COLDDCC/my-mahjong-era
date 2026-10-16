@@ -1,0 +1,48 @@
+<section class="set-checklist" aria-labelledby="set-checklist-title">
+  <div class="checklist-header"><p class="checklist-kicker">FREE BUYING TOOL</p><h2 id="set-checklist-title">Is this set ready for American Mah Jongg?</h2><p>Use this checklist while comparing a product listing. Tick only the items you have verified; the list stays on this page and does not send your selections anywhere.</p></div>
+  <div class="checklist-progress"><strong id="set-progress" aria-live="polite">0 of 8 checked</strong><div class="checklist-meter" role="progressbar" aria-label="Checklist completion" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span id="set-progress-fill"></span></div></div>
+  <fieldset id="set-checklist-items"><legend>Check the product details</legend>
+    <label><input type="checkbox" data-required="true"/><span><strong>108 numbered suit tiles</strong><small>Dots, bams and craks: 36 of each</small></span></label>
+    <label><input type="checkbox" data-required="true"/><span><strong>16 wind tiles and 12 dragon tiles</strong><small>Four of each wind and dragon</small></span></label>
+    <label><input type="checkbox" data-required="true"/><span><strong>8 flower tiles</strong><small>Confirm the exact quantity, not just the photos</small></span></label>
+    <label><input type="checkbox" data-required="true"/><span><strong>8 joker tiles</strong><small>Essential for common NMJL-style American play</small></span></label>
+    <label><input type="checkbox"/><span><strong>Four racks</strong><small>Check whether racks are included or sold separately</small></span></label>
+    <label><input type="checkbox"/><span><strong>Pushers, if you want them</strong><small>Optional accessory, often sold with racks</small></span></label>
+    <label><input type="checkbox"/><span><strong>Readable tiles and suitable dimensions</strong><small>Check actual tile size and table space</small></span></label>
+    <label><input type="checkbox"/><span><strong>Official current-year card available</strong><small>Often purchased separately; not necessarily in the box</small></span></label>
+  </fieldset>
+  <div class="checklist-result" aria-live="polite" id="set-checklist-result">Start with the tile counts. Those four checks are essential for a standard 152-tile American playing set.</div>
+  <div class="checklist-actions"><button type="button" id="set-copy">Copy checklist</button><button type="button" class="checklist-reset" id="set-reset">Reset</button><span id="set-copy-status" role="status"></span></div>
+  <p class="checklist-footnote">This is an independent shopping aid, not a certification. Always confirm the applicable rules and complete item listing.</p>
+</section>
+<style>
+.set-checklist{margin:50px 0 65px;padding:clamp(20px,4vw,42px);border:1px solid #e3d2d6;background:#fcf7f4;color:#49313b}.checklist-header h2{font-family:Georgia,serif;font-size:clamp(28px,3.5vw,40px);font-weight:400;line-height:1.2;margin:8px 0 14px}.checklist-header p{line-height:1.7}.checklist-kicker{font-size:11px;letter-spacing:.18em;font-weight:700;color:#9d4769}.checklist-progress{margin:25px 0}.checklist-progress strong{font-size:14px}.checklist-meter{margin-top:10px;background:#eadde0;height:8px;overflow:hidden}.checklist-meter span{display:block;height:100%;width:0;background:#9a4d67;transition:width .2s}.set-checklist fieldset{border:0;padding:0;margin:0}.set-checklist legend{font-weight:700;margin-bottom:15px}.set-checklist label{display:flex;align-items:flex-start;gap:13px;padding:15px 0;border-top:1px solid #e9dfe1;cursor:pointer}.set-checklist label input{accent-color:#9a4d67;width:19px;height:19px;flex-shrink:0;margin-top:3px}.set-checklist label span{display:grid;gap:4px}.set-checklist label strong{font-size:15px}.set-checklist label small{font-size:13px;color:#806b72;line-height:1.5}.checklist-result{margin-top:23px;padding:16px 18px;background:#f0e5e8;line-height:1.65;font-size:14px}.checklist-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px}.checklist-actions button{background:#8f3c5b;color:#fff;border:0;padding:12px 18px;font:inherit;cursor:pointer}.checklist-actions .checklist-reset{background:transparent;color:#8f3c5b;border:1px solid #b98ca0}.checklist-actions #set-copy-status{font-size:12px}.checklist-footnote{font-size:12px;line-height:1.6;color:#806b72;margin-top:18px}
+</style>
+<script>
+  const root=document.querySelector('.set-checklist');
+  if(root){
+    const boxes=Array.from(root.querySelectorAll('input[type="checkbox"]')) as HTMLInputElement[];
+    const progress=root.querySelector('#set-progress')!;
+    const fill=root.querySelector('#set-progress-fill') as HTMLElement;
+    const meter=root.querySelector('.checklist-meter')!;
+    const result=root.querySelector('#set-checklist-result')!;
+    const status=root.querySelector('#set-copy-status')!;
+    const refresh=()=>{
+      const checked=boxes.filter(b=>b.checked).length;
+      const essential=boxes.filter(b=>b.dataset.required==='true');
+      const missing=essential.filter(b=>!b.checked).length;
+      progress.textContent=checked+' of '+boxes.length+' checked';
+      fill.style.width=(checked/boxes.length*100)+'%';
+      meter.setAttribute('aria-valuenow',String(checked));
+      result.textContent=missing>0?'Verify the '+missing+' remaining essential tile-count '+(missing===1?'item':'items')+' before buying. Accessories and the annual card may be separate purchases.':checked===boxes.length?'All checks marked. Confirm the retailer listing and official card details before buying.':'Core tile counts checked. Review accessories, tile size and the annual card before ordering.';
+    };
+    boxes.forEach(b=>b.addEventListener('change',refresh));
+    root.querySelector('#set-reset')?.addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);status.textContent='';refresh()});
+    root.querySelector('#set-copy')?.addEventListener('click',async()=>{
+      const lines=['American Mahjong set buying checklist',...boxes.map(b=>(b.checked?'[x] ':'[ ] ')+(b.parentElement?.querySelector('strong')?.textContent||'')),'Source: https://mymahjongera.com/american-mahjong/sets/'];
+      const value=lines.join('\n');
+      try{await navigator.clipboard.writeText(value);status.textContent='Copied!'}catch{status.textContent='Copy unavailable in this browser.'}
+    });
+    refresh();
+  }
+</script>
