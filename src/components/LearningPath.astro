@@ -1,0 +1,17 @@
+---
+const lessons=[
+{step:'01',tag:'START HERE',time:'5 min read',title:'Meet the tiles',description:'Learn dots, bams, craks, winds, dragons, flowers and jokers using the interactive tile atlas.',href:'/american-mahjong/tiles/'},
+{step:'02',tag:'THE BASICS',time:'7 min read',title:'Understand the rules',description:'Get comfortable with turns, exposures, jokers and what makes a legal hand.',href:'/american-mahjong/rules/'},
+{step:'03',tag:'PLAY ALONG',time:'8 min read',title:'Play your first game',description:'Follow the table setup, Charleston, draws, discards and winning-hand check.',href:'/american-mahjong/how-to-play/'},
+{step:'04',tag:'THE YEARLY CARD',time:'6 min read',title:'Read the annual card',description:'Understand why the card matters and how to use it without memorizing every hand.',href:'/american-mahjong/card/'},
+{step:'05',tag:'GET READY',time:'6 min read',title:'Choose a complete set',description:'Compare beginner, travel and decorative sets, then check the contents before buying.',href:'/american-mahjong/sets/'}
+];
+---
+<section class="learning-path" id="learning-path" aria-labelledby="learning-path-title">
+<div class="learning-intro"><p class="learning-kicker">THE BEGINNER'S PATH</p><h2 id="learning-path-title">From curious to game night.</h2><p>Five short lessons, one clear starting point. Follow the path in order or jump to the topic you need.</p></div>
+<ol class="learning-steps">{lessons.map(lesson=><li><a href={lesson.href} class="learning-step"><span class="learning-number">{lesson.step}</span><span class="learning-copy"><span class="learning-meta">{lesson.tag} <span aria-hidden="true">·</span> {lesson.time}</span><strong>{lesson.title}</strong><span class="learning-description">{lesson.description}</span></span><span class="learning-arrow" aria-hidden="true">↗</span></a></li>)}</ol>
+<p class="learning-footer">New to American Mah Jongg? Begin with <a href="/american-mahjong/tiles/">the illustrated tile guide</a>. For official play, always use the current card and rules for your group.</p>
+</section>
+<style>
+.learning-path{margin:42px 0 55px;padding:clamp(20px,3.5vw,40px);background:#f8f3ed;border:1px solid #e8dcd1;color:#48383c}.learning-kicker{font-size:11px;letter-spacing:.16em;color:#92516d;font-weight:700}.learning-intro h2{font:400 clamp(30px,4vw,44px)/1.15 Georgia,serif;margin:12px 0}.learning-intro>p:last-child{font-size:15px;line-height:1.7;color:#76676b;max-width:56ch}.learning-steps{padding:0;margin:27px 0 0;list-style:none;border-top:1px solid #dfd2cd}.learning-steps li{border-bottom:1px solid #dfd2cd}.learning-step{display:grid;grid-template-columns:55px minmax(0,1fr) 20px;gap:14px;align-items:start;padding:21px 3px;text-decoration:none;color:inherit;transition:background .15s}.learning-step:hover{background:#f0e8e1}.learning-step:focus-visible{outline:3px solid #537b75;outline-offset:2px}.learning-number{font:italic 30px Georgia,serif;color:#a47786}.learning-copy{display:grid;gap:7px}.learning-meta{font-size:10px;letter-spacing:.12em;font-weight:700;color:#95526c}.learning-copy strong{font:400 23px Georgia,serif}.learning-description{font-size:13px;line-height:1.6;color:#716469}.learning-arrow{font-size:19px;color:#9d6b7b}.learning-footer{font-size:13px;line-height:1.7;margin-top:20px;color:#74666a}.learning-footer a{color:#82405b;text-decoration:underline;text-underline-offset:3px}@media(max-width:500px){.learning-step{grid-template-columns:40px minmax(0,1fr) 16px;gap:9px}.learning-number{font-size:24px}.learning-copy strong{font-size:21px}}
+</style>
